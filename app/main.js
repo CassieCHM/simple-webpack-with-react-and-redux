@@ -1,4 +1,6 @@
 var React = require('react'),
-    AppComponent = require('./components/productBox')
+    ReactDOM = require('react-dom')
 
-React.render(<AppComponent />, document.getElementById('content'))
+var AppComponent = require('./components/productBox')
+
+ReactDOM.render(<AppComponent />, document.getElementById('root'))

@@ -3,20 +3,18 @@ var path = require('path')
 module.exports = {
     entry: path.resolve(__dirname, './app/main.js'),
     output: {
-        path: path.resolve(__dirname, './index'),
+        path: path.resolve(__dirname, './build'),
         filename: 'index.js',
     },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     module: {
-        rules: [
+        loaders: [
             {
                 test: /\.jsx?$/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ["es2015"]
-                    },
-                },
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                loaders: ['babel-loader']
             }
         ]
     }
