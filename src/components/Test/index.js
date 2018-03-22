@@ -1,4 +1,6 @@
-const React = require('react')
+import React from 'react'
+import 'SRC/components/a'
+import 'SRC/styles/index.scss'
 
 const Test = React.createClass({
     render: function () {
