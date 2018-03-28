@@ -1,3 +1,6 @@
+@import "~SRC/styles/variables/index.scss";
+@import "~SRC/statics/iconfont/iconfont.css";
+
 :global {
   html,
   body {
@@ -10,6 +13,7 @@
     .g-content {
       font-size: 50px;
       text-align: center;
+      color: $c_brand;
     }
   }
 }

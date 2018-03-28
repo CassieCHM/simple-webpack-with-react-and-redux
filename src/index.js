@@ -1,5 +1,5 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const APP = require('../src/components/Test/index')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import AppRouter from 'SRC/route/index'
 
-ReactDOM.render(<APP />, document.getElementById('root'))
+ReactDOM.render(<AppRouter />, document.getElementById('root'))

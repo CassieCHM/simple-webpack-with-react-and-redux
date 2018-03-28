@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-    <title>React Test</title>
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keyword" content="<%= htmlWebpackPlugin.options.KEYWORD %>">
+    <title>管理后台</title>
+    <link rel="shortcut icon" href="<%= htmlWebpackPlugin.options.FAVICON_PATH %>" type="image/x-icon">
 </head>
-
-<body>
-<div id="root" class="g-body"></div>
+<body data-app="<%= htmlWebpackPlugin.options.APP_NAME %>">
+<script>
+    // 全局配置变量
+    window.APP = document.getElementsByTagName('body')[0].dataset.app
+</script>
+<div id="root"></div>
 </body>
 </html>

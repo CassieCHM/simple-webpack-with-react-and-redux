@@ -1,5 +1,4 @@
 import React from 'react'
-import 'SRC/components/a'
 import 'SRC/styles/index.scss'
 
 const Test = React.createClass({
@@ -7,6 +6,7 @@ const Test = React.createClass({
         return (
             <div className="g-content">
                 Hello World!
+                This is something difference!
             </div>
         )
     }

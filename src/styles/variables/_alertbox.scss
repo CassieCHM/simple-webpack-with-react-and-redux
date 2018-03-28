@@ -1,0 +1,159 @@
+@import "./skin";
+
+:global {
+  .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000, endColorstr=#4c000000);
+    display: none;
+    z-index: 9998
+  }
+
+  .ym-modal {
+    min-width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+    background-color: #fff;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    .head {
+      position: relative;
+      -moz-border-radius: 4px 4px 0 0;
+      -webkit-border-radius: 4px;
+      border-radius: 4px 4px 0 0;
+      overflow: hidden;
+      color: #000;
+      padding: 20px;
+      font-size: 0;
+
+      .title {
+        font-size: 16px;
+        line-height: 16px;
+        display: inline
+      }
+
+      .ym-close {
+        float: right;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        margin-right: 0;
+        background: url('/src/statics/images/x.png') center;
+      }
+    }
+
+    .body {
+      min-height: 100px;
+      padding: 0 10px;
+      overflow-y: auto;
+
+      .form-group {
+        .u-input {
+          padding: 10px 10px;
+        }
+      }
+
+      .u-btn-large {
+        margin-top: 30px;
+        width: 320px;
+        padding: 12px 16.5px !important;
+      }
+
+      .modal-send {
+        margin: 0;
+        min-width: 48px;
+        width: auto;
+        height: 40px;
+        color: $c-brand;
+      }
+
+      .warning-tishi {
+        line-height: 90px;
+
+        .icon-tishi {
+          float: left;
+          color: #ffcb38;
+          font-size: 40px;
+        }
+
+        .icon-chenggong {
+          float: left;
+          color: #2bc380;
+          font-size: 40px;
+        }
+
+        .text-tishi {
+          float: left;
+          display: inline-block;
+          margin: 23px 0 0 12px;
+          line-height: 20px;
+          width: 300px;
+        }
+      }
+    }
+
+    .foot {
+      height: 68px;
+      line-height: 66px;
+      padding: 0 20px;
+      text-align: right; /*text-align:center;*/
+      font-size: 0
+    }
+
+    .modal-btns {
+      text-align: center;
+      padding: 10px 16.5px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 4px;
+      font-size: 12px;
+      border: 1px solid
+    }
+
+    .modal-forget {
+      color: $c-brand;
+      cursor: pointer;
+    }
+
+    .modal-confirm {
+      background-color: $c-brand;
+      border-color: $c-brand;
+      color: #fff;
+      margin-left: 10px;
+      font-size: 14px;
+      letter-spacing: 0.17px;
+    }
+
+    .modal-confirm:hover {
+      background-color: $c-brand;
+      border-color: $c-brand
+    }
+
+    .modal-close {
+      background-color: #fff;
+      border-color: #dcdcdc;
+      color: #333;
+      margin-right: 0;
+      font-size: 14px;
+      letter-spacing: 0.17px;
+    }
+
+    .modal-close:hover {
+      background-color: #efefef;
+      border-color: #cbcbcb
+    }
+  }
+
+}
