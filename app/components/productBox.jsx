@@ -1,13 +1,17 @@
-var React = require('react')
+import React, { Component } from 'react'
 
-var ProductBox = React.createClass({
-    render: function () {
+class Structure extends Component {
+    constructor (props) {
+        super (props)
+    }
+
+    render () {
         return (
             <div className="productBox">
                 Hello World!
             </div>
         )
     }
-})
+}
 
-module.exports = ProductBox
+export default Structure

@@ -1,6 +1,5 @@
-var React = require('react'),
-    ReactDOM = require('react-dom')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Structure from './components/productBox'
 
-var AppComponent = require('./components/productBox')
-
-ReactDOM.render(<AppComponent />, document.getElementById('root'))
+ReactDOM.render(<Structure />, document.getElementById('root'))

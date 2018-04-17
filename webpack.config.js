@@ -1,21 +1,29 @@
-var path = require('path')
+const webpack = require('webpack')
+const path = require('path')
 
-module.exports = {
-    entry: path.resolve(__dirname, './app/main.js'),
-    output: {
-        path: path.resolve(__dirname, './build'),
-        filename: 'index.js',
+const webpackConfig = {
+    entry: {
+        index: [path.join(__dirname, './app/main.js')]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['jsx']
+    },
+    output: {
+        path: path.join(__dirname, './build'),
+        filename: 'index.js',
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: ['babel-loader']
+                use: 'babel-loader'
             }
         ]
-    }
+    },
 }
+
+module.exports = webpackConfig
+
+
+
