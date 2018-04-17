@@ -1,1 +1,1 @@
-# enta
+# an example: base webpack with react
