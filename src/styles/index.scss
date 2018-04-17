@@ -1,19 +1,207 @@
-@import "~SRC/styles/variables/index.scss";
-@import "~SRC/statics/iconfont/iconfont.css";
-
 :global {
-  html,
-  body {
+  /* reset */
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  html, body,
+  h1, h2, h3, h4, h5, h6,
+  div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
     margin: 0;
     padding: 0;
+  }
+  header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+    display: block;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  caption, th {
+    text-align: left;
+    font-weight: normal;
+  }
+  html, body, fieldset, img, iframe, abbr {
+    border: 0;
+  }
+  body, textarea, input, button, select, keygen, legend {
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
     font-size: 14px;
+    line-height: 14px;
+    color: #333333;
+    outline: 0;
+  }
+  body {
+    min-width: 1200px;
+    overflow-y: hidden;
+    background-color: #edeef1;
+  }
+  i, cite, em, var, address, dfn {
+    font-style: normal;
+  }
+  [hidefocus], summary {
+    outline: 0;
+  }
+  li {
+    list-style: none;
+  }
+  h1, h2, h3, h4, h5, h6, small {
+    font-size: 100%;
+  }
+  sup, sub {
+    font-size: 83%;
+  }
+  pre, code, kbd, samp {
+    font-family: inherit;
+  }
+  q:before, q:after {
+    content: none;
+  }
+  textarea {
+    overflow: auto;
+    resize: none;
+  }
+  label, summary {
+    cursor: default;
+  }
+  a, button {
+    cursor: pointer;
+  }
+  h1, h2, h3, h4, h5, h6, em, strong, b {
+    font-weight: bold;
+  }
+  a[disabled] {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.7;
   }
 
-  .g-body {
-    .g-content {
-      font-size: 50px;
-      text-align: center;
-      color: $c_brand;
+  .txt-red {
+    color: #fa565a !important;
+  }
+
+  .f-dn {
+    display: none !important;
+  }
+
+  /*滚动条*/
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+  }
+  ::-webkit-resizer {
+    background: #ffffff;
+  }
+
+  /* 布局 */
+  .header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 80px;
+    z-index: 2;
+    color: #ffffff;
+
+    .part-one {
+      width: 100%;
+      height: 32px;
+      background-color: #3a414e;
+
+      .content {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        line-height: 32px;
+      }
+      .org {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        width: 500px;
+        color: #ffffff;
+        letter-spacing: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .log {
+        position: relative;
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+
+        .triangle {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-top: 7px solid #8b8c8e;
+          border-bottom: 0;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          color: #8b8c8e;
+        }
+      }
+    }
+  }
+
+  .container {
+    position: absolute;
+    top: 90px;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    min-width: 1200px;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+    height: auto;
+    background-color: #edeef1;
+
+    .wrapper {
+      position: relative;
+      width: 1200px;
+      height: auto;
+      margin: 0 auto;
+      overflow: hidden;
+
+      .body {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        height: auto;
+        width: 1200px;
+        min-height: 680px;
+        background-color: #ffffff;
+      }
+
+      .footer {
+        padding: 2% 0;
+        width: 100%;
+        height: 3%;
+
+        .content {
+          margin: 0 auto;
+          width: 1200px;
+        }
+      }
     }
   }
 }

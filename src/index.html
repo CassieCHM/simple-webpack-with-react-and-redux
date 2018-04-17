@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="keyword" content="<%= htmlWebpackPlugin.options.KEYWORD %>">
-    <title>管理后台</title>
+    <title>测试页面</title>
     <link rel="shortcut icon" href="<%= htmlWebpackPlugin.options.FAVICON_PATH %>" type="image/x-icon">
 </head>
-<body data-app="<%= htmlWebpackPlugin.options.APP_NAME %>">
+
+<body data-app="<%= htmlWebpackPlugin.options.APP %>">
 <script>
-    // 全局配置变量
-    window.APP = document.getElementsByTagName('body')[0].dataset.app
+    /*
+    *
+    * 全局配置变量
+    * APP: app类型
+    * LOGIN_URL: 后台登录地址
+    *
+    * */
+    var $body = document.getElementsByTagName('body')[0];
+
+    window.APP = $body.dataset.app;
+    window.APP_NAME = $body.dataset.name;
+    window.LOGIN_URL = $body.dataset.acl;
+    window.ADMIN_URL = $body.dataset.admin;
+
 </script>
 <div id="root"></div>
+
 </body>
 </html>

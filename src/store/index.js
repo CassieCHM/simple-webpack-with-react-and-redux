@@ -1,5 +1,4 @@
-import {createStore} from 'redux'
+import { createStore } from 'redux'
+import reducers from 'SRC/redux/index'
 
-const store = createStore(fn)
-
-export default store
+export const store = createStore(reducers)
