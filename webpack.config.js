@@ -6,7 +6,7 @@ const webpackConfig = {
         index: [path.join(__dirname, './app/main.js')]
     },
     resolve: {
-        extensions: ['jsx']
+        extensions: ['.js', '.jsx']
     },
     output: {
         path: path.join(__dirname, './build'),
