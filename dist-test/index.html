@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keyword" content="关键字">
+    <title>测试页面</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+
+<body data-app="test">
+<script>
+    /*
+    *
+    * 全局配置变量
+    * APP: app类型
+    * LOGIN_URL: 后台登录地址
+    *
+    * */
+    var $body = document.getElementsByTagName('body')[0];
+
+    window.APP = $body.dataset.app;
+    window.APP_NAME = $body.dataset.name;
+    window.LOGIN_URL = $body.dataset.acl;
+    window.ADMIN_URL = $body.dataset.admin;
+
+</script>
+<div id="root"></div>
+
+<script type="text/javascript" src="vendor.f1bad.js"></script><script type="text/javascript" src="index.f1bad.js"></script></body>
+</html>

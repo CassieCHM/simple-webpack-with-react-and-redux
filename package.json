@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=dev webpack-dev-server --config webpack.dev.config.js --color --progress --inline --open",
+    "dev": "cross-env NODE_ENV=dev webpack --config webpack.dev.config.js --color --progress",
     "build": "webpack"
   },
   "repository": {
